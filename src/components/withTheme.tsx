@@ -1,7 +1,7 @@
 import React from "react";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 
-interface WithThemeProps {
+export interface WithThemeProps {
   theme?: DefaultTheme;
 }
 

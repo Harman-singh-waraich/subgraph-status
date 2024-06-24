@@ -1,8 +1,8 @@
 import Slider, { Settings } from "react-slick";
 import styled from "styled-components";
-import { SubgraphStatus } from "src/hooks/useWatcher";
-import DotAndStatus from "src/components/DotAndStatus";
-import Blocks from "src/components/Blocks";
+import { SubgraphStatus } from "../../hooks/useWatcher";
+import DotAndStatus from "../../components/DotAndStatus";
+import Blocks from "../../components/Blocks";
 
 const Slide = styled.div`
   display: flex !important;

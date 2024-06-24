@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { SubgraphStatus } from "src/hooks/useWatcher";
-import { getStatusColorAndText } from "src/utils/getStatusColorAndText";
+import { SubgraphStatus } from "../hooks/useWatcher";
+import { getStatusColorAndText } from "../utils/getStatusColorAndText";
 
 const Container = styled.div`
   display: flex;

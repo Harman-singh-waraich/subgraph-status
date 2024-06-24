@@ -1,19 +1,19 @@
 import { useMemo } from "react";
 import Slider, { Settings } from "react-slick";
 import styled from "styled-components";
-import Loader from "src/components/Loader";
-import withTheme from "src/components/withTheme";
+import Loader from "../components/Loader";
+import withTheme from "../components/withTheme";
 import useWatcher, {
   HealthStatus,
   Options,
   Subgraph,
   SubgraphStatus,
-} from "src/hooks/useWatcher";
+} from "../hooks/useWatcher";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import DotAndStatus from "src/components/DotAndStatus";
-import Blocks from "src/components/Blocks";
+import DotAndStatus from "../components/DotAndStatus";
+import Blocks from "../components/Blocks";
 
 const Container = styled.div<{ hide?: boolean }>`
   display: ${({ hide }) => (hide ? "none" : "block")};
