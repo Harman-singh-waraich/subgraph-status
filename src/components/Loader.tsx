@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const LoaderIcon = styled.div`
-  width: 16px;
+  width: 12px;
   aspect-ratio: 1;
   --_g: no-repeat radial-gradient(farthest-side, #fff 94%, #fff);
   background: var(--_g) 0 0, var(--_g) 100% 0, var(--_g) 100% 100%,
@@ -17,6 +17,7 @@ const LoaderIcon = styled.div`
 
 const Container = styled.div`
   display: flex;
+  height: fit-content;
   justify-content: center;
   align-items: center;
   gap: 8px;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { fetchSubgraphDeploymentId } from "../utils/fetchSubgraphDeploymentId";
-import { fetchSubgraphStatuses } from "../utils/fetchSubgraphStatuses";
-import { Health } from "../types/StatusesQuery";
+import { fetchSubgraphDeploymentId } from "src/utils/fetchSubgraphDeploymentId";
+import { fetchSubgraphStatuses } from "src/utils/fetchSubgraphStatuses";
+import { Health } from "src/types/StatusesQuery";
 
 export enum HealthStatus {
   HEALTHY,
