@@ -6,6 +6,8 @@
   "main": "dist/index.js",
   "types": "dist/types.d.ts",
   "isLibrary": true,
+  "author": "tractors",
+  "license": "MIT",
   "files": [
     "dist",
     "README.md"
@@ -23,7 +25,8 @@
     "clear": "rm -r .parcel-cache",
     "clean": "rm dist/*",
     "start": "react-scripts start",
-    "build": "parcel build"
+    "build": "react-scripts build",
+    "package": "parcel build"
   },
   "eslintConfig": {
     "extends": [

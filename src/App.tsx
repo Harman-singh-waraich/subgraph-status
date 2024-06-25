@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import StatusBanner from "./lib/StatusBanner";
 import { StatusCard } from "./lib";
+import Footer from "./components/Footer";
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #ebeeef;
 `;
 
 function App() {
@@ -27,8 +30,9 @@ function App() {
   ];
   return (
     <Container>
-      <StatusBanner autoHide subgraphs={subgraphs} />
+      <StatusBanner subgraphs={subgraphs} />
       <StatusCard subgraphs={subgraphs} />
+      <Footer />
     </Container>
   );
 }
