@@ -25,37 +25,31 @@ interface IStatusCard {
   subgraphs: Subgraph[];
   watcherOptions?: Options;
   carouselOptions?: Settings;
+  className?: string;
 }
 
 const StatusCard: React.FC<IStatusCard> = ({
   subgraphs,
   watcherOptions,
   carouselOptions,
+  className,
 }) => {
   const { statuses, isLoadingIds, isLoadingStatus } = useWatcher(
     subgraphs,
     watcherOptions
   );
 
+  let RenderedComponent: JSX.Element | null = null;
+
   if (isLoadingIds)
-    return (
-      <Container className="card">
-        <Loader text="Loading deployment IDs" />
-      </Container>
-    );
+    RenderedComponent = <Loader text="Loading deployment IDs" />;
+  else if (isLoadingStatus || !statuses)
+    RenderedComponent = <Loader text="Checking up on subgraphs" />;
+  else {
+    RenderedComponent = <StatusSlider {...{ statuses, carouselOptions }} />;
+  }
 
-  if (isLoadingStatus || !statuses)
-    return (
-      <Container className="card">
-        <Loader text="Checking up on subgraphs" />
-      </Container>
-    );
-
-  return (
-    <Container className="card">
-      <StatusSlider {...{ statuses, carouselOptions }} />
-    </Container>
-  );
+  return <Container {...{ className }}>{RenderedComponent}</Container>;
 };
 
 export default withTheme(StatusCard);

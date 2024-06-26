@@ -54,6 +54,7 @@ interface IStatusBanner {
   textFormatter?: (subgraphStatus: SubgraphStatus) => string;
   // hide the banner if all subgraphs are healthy
   autoHide?: boolean;
+  className?: string;
 }
 
 const StatusBanner: React.FC<IStatusBanner> = ({
@@ -62,6 +63,7 @@ const StatusBanner: React.FC<IStatusBanner> = ({
   carouselOptions,
   textFormatter,
   autoHide,
+  className,
 }) => {
   const { statuses, isLoadingIds, isLoadingStatus } = useWatcher(
     subgraphs,
@@ -87,22 +89,13 @@ const StatusBanner: React.FC<IStatusBanner> = ({
     ...carouselOptions,
   };
 
+  let RenderedComponent: JSX.Element | null = null;
   if (isLoadingIds)
-    return (
-      <Container className="banner">
-        <Loader text="Loading deployment IDs" />
-      </Container>
-    );
-
-  if (isLoadingStatus || !statuses)
-    return (
-      <Container className="banner">
-        <Loader text="Checking up on subgraphs" />
-      </Container>
-    );
-
-  return (
-    <Container className="banner" {...{ hide }}>
+    RenderedComponent = <Loader text="Loading deployment IDs" />;
+  else if (isLoadingStatus || !statuses)
+    RenderedComponent = <Loader text="Checking up on subgraphs" />;
+  else {
+    RenderedComponent = (
       <Slider {...settings}>
         {statuses.map((status) => (
           <Slide key={status.name} className="slide">
@@ -122,8 +115,10 @@ const StatusBanner: React.FC<IStatusBanner> = ({
           </Slide>
         ))}
       </Slider>
-    </Container>
-  );
+    );
+  }
+
+  return <Container {...{ className, hide }}>{RenderedComponent}</Container>;
 };
 
 export default withTheme(StatusBanner);
