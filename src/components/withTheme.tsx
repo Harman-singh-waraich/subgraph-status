@@ -2,7 +2,16 @@ import React from "react";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 
 export interface WithThemeProps {
-  theme?: DefaultTheme;
+  theme?: Partial<{
+    borderRadius: string;
+
+    colors: Partial<{
+      main: string;
+      secondary: string;
+      primary: string;
+      stroke: string;
+    }>;
+  }>;
 }
 
 export const defaultTheme: DefaultTheme = {

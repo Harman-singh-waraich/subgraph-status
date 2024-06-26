@@ -5,11 +5,11 @@ declare module "styled-components" {
   export interface DefaultTheme {
     borderRadius: string;
 
-    colors: {
+    colors: Partial<{
       main: string;
       secondary: string;
       primary: string;
       stroke: string;
-    };
+    }>;
   }
 }

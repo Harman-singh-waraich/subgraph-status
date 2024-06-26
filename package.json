@@ -1,7 +1,7 @@
 {
   "name": "subgraph-status",
   "description": "A UI library to display subgraph statuses",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "source": "src/lib/index.ts",
   "main": "dist/index.js",
   "types": "dist/types.d.ts",

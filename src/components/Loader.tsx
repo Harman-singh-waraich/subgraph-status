@@ -3,7 +3,12 @@ import styled from "styled-components";
 const LoaderIcon = styled.div`
   width: 12px;
   aspect-ratio: 1;
-  --_g: no-repeat radial-gradient(farthest-side, #fff 94%, #fff);
+  --_g: no-repeat
+    radial-gradient(
+      farthest-side,
+      ${({ theme }) => theme.colors.primary} 94%,
+      ${({ theme }) => theme.colors.primary}
+    );
   background: var(--_g) 0 0, var(--_g) 100% 0, var(--_g) 100% 100%,
     var(--_g) 0 100%;
   background-size: 40% 40%;
@@ -25,7 +30,7 @@ const Container = styled.div`
 `;
 
 const LoaderText = styled.label`
-  color: white;
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 14px;
 `;
 
