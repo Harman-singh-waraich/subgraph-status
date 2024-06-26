@@ -3,7 +3,7 @@ import styled from "styled-components";
 import StatusSlider from "./StatusSlider";
 import useWatcher, { Options, Subgraph } from "../../hooks/useWatcher";
 import Loader from "../../components/Loader";
-import withTheme from "../../components/withTheme";
+import withTheme, { WithThemeProps } from "../../components/withTheme";
 
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
