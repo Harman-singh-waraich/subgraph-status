@@ -27,6 +27,10 @@ function App() {
       name: "Kleros-Moderate",
       url: "https://api.studio.thegraph.com/query/61738/kleros-moderate-test/version/latest",
     },
+    {
+      name: "Kleros-Escrow",
+      url: "https://api.studio.thegraph.com/query/61738/escrow-v2-devnet/version/latest",
+    },
   ];
   return (
     <Container>
