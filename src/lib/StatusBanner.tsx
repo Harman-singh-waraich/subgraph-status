@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import Slider, { Settings } from "react-slick";
 import styled from "styled-components";
 import Loader from "../components/Loader";
-import withTheme, { WithThemeProps } from "../components/withTheme";
+import withTheme from "../components/withTheme";
 import useWatcher, {
   HealthStatus,
   Options,

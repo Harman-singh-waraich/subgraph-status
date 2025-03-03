@@ -24,7 +24,7 @@ export const fetchSubgraphStatuses = async (ids: string[]) => {
 }`;
 
     const response = await fetch(
-      "https://api.thegraph.com/index-node/graphql",
+      "https://indexer.upgrade.thegraph.com/status",
       {
         method: "POST",
         body: JSON.stringify({

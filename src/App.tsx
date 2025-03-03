@@ -20,16 +20,8 @@ function App() {
       url: "https://api.studio.thegraph.com/query/61738/curate-v2-devnet/version/latest",
     },
     {
-      name: "Gnosis-Safe",
-      url: "https://api.studio.thegraph.com/query/61738/gnosis-safe-mainnet/version/latest",
-    },
-    {
-      name: "Kleros-Moderate",
-      url: "https://api.studio.thegraph.com/query/61738/kleros-moderate-test/version/latest",
-    },
-    {
-      name: "Kleros-Escrow",
-      url: "https://api.studio.thegraph.com/query/61738/escrow-v2-devnet/version/latest",
+      name: "Kleros Court",
+      url: "https://api.studio.thegraph.com/query/61738/kleros-v2-coreneo/version/latest",
     },
   ];
   return (

@@ -122,7 +122,7 @@ const useWatcher = (subgraphs: Subgraph[], options = initialOptions) => {
     }, options.interval);
 
     return () => clearInterval(intervalId);
-  }, [subgraphIds, idToNameMap]);
+  }, [subgraphIds, idToNameMap, options]);
 
   return { statuses, isLoadingIds, isLoadingStatus };
 };
